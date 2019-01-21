@@ -1,0 +1,42 @@
+<html>
+    <head>
+    </head>
+    <body>
+
+    <div>
+        <img src="" class="icon1">
+    </div>
+
+    </body>
+
+
+    <script>
+        var icon1 = document.querySelector('.icon1');
+
+        window.addEventListener("mousemove",function(e){
+            icon1.style.left = e.clientX +"px";
+            icon1.style.top = e.clientY +"px";
+            //icon1.setAttribute('style',`left: ${e.clientX}px; top: ${e.clientY}px`);
+            console.log(e);
+        })
+    </script>
+
+    <style>
+        .icon1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transition: .2s ease-out;
+            animation: rotate1 .8s linear infinite;
+        }
+        @keyframes rotate1 {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</html>
